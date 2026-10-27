@@ -84,17 +84,17 @@ public class ReadJson {
 
         try {
 
-            String name = (String)jsonObject.get("starships");
+            String name = (String)jsonObject.get("height");
 
-            org.json.simple.JSONArray msg = (org.json.simple.JSONArray) jsonObject.get("films");
+            org.json.simple.JSONArray msg = (org.json.simple.JSONArray) jsonObject.get("starships");
             int n =   msg.size(); //(msg).length();
             for (int i = 0; i < n; ++i) {
                 String test =(String) msg.get(i);
-                System.out.println(test);
+                System.out.println("Starship(s): " + test);
                 // System.out.println(person.getInt("key"));
             }
-            String height= (String)jsonObject.get("starships");
-            System.out.println(name);
+            String height= (String)jsonObject.get("height");
+            //System.out.println(name);
         }
 
         catch (Exception e) {
